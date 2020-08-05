@@ -16,6 +16,23 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
+gem 'bootstrap', '~> 4.4.1'
+gem 'carrierwave', '~> 2.1'
+gem 'devise', '~> 4.7', '>= 4.7.1'
+gem 'fog-aws', '~> 3.6', '>= 3.6.2'
+# gem 'font_awesome5_rails'
+gem 'jquery-rails'
+gem 'mini_magick', '~> 4.10', '>= 4.10.1'
+gem 'ovirt-engine-sdk', '~> 4.3'
+gem 'simple_form', '~> 5.0', '>= 5.0.2'
+
+gem 'active_storage_validations', '0.8.2'
+# gem 'font-awesome-rails'
+gem 'font_awesome5_rails'
+gem 'open-iconic-rails'
+# gem 'sass-rails', '>= 6'
+gem 'will_paginate', '~> 3.1.0'
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
