@@ -23,7 +23,7 @@ gem 'fog-aws', '~> 3.6', '>= 3.6.2'
 # gem 'font_awesome5_rails'
 gem 'jquery-rails'
 gem 'mini_magick', '~> 4.10', '>= 4.10.1'
-gem 'ovirt-engine-sdk', '~> 4.3'
+# gem 'ovirt-engine-sdk', '~> 4.3'
 gem 'simple_form', '~> 5.0', '>= 5.0.2'
 
 gem 'active_storage_validations', '0.8.2'
