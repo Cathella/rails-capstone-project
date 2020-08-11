@@ -14,7 +14,7 @@
         </div>
 
         <div class="col-10 d-flex justify-content-start align-items-center border-bottom border-white">
-          <a href="/transactions" class="h5 text-white">My expenses</a>
+          <a href="/transactions" class="h5 text-white">My Transactions</a>
         </div>
 
         <div class="col-2 d-flex justify-content-center align-items-center mt-3 mb-3">
@@ -22,7 +22,7 @@
         </div>
 
         <div class="col-10 d-flex justify-content-start align-items-center border-bottom border-white">
-          <a href="/etransactions" class="h5 text-white">None categorised expenses</a>
+          <a href="/etransactions" class="h5 text-white">My External Transactions</a>
         </div>
 
         <div class="col-2 d-flex justify-content-center align-items-center mt-3 mb-3">
@@ -30,7 +30,7 @@
         </div>
 
         <div class="col-10 d-flex justify-content-start align-items-center border-bottom border-white">
-          <a href="/groups" class="h5 text-white">Categories</a>
+          <a href="/groups" class="h5 text-white">Transaction Groups</a>
         </div>
 
         <div class="col-2 d-flex justify-content-center align-items-center mt-3 mb-3">
@@ -38,13 +38,13 @@
         </div>
 
         <div class="col-10 d-flex justify-content-start align-items-center">
-          <a href="/memberstransactions" class="h5 text-white">Members expenses</a>
+          <a href="/memberstransactions" class="h5 text-white">Other member Transactions</a>
         </div>
 
         <div class="col-2">
         </div>
 
-        <div class="col-10">
+        <div class="col-10 text-right">
           <%= link_to "Log Out", destroy_user_session_path, method: :delete, class:"btn btn-lg logout-btn " %>
         </div>
       </div>
