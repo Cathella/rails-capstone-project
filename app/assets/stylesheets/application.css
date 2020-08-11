@@ -175,3 +175,29 @@ label {
   color: white;
   font-size: 14px;
 }
+
+input, label {
+  width: 100%;
+}
+
+input {
+  height: 45px;
+}
+
+form {
+  background: #f5f6f8;
+  padding: 30px 0 50px;
+}
+
+.form-inputs,
+.form-actions {
+  padding: 0 70px;
+}
+
+.nav-head {
+  background: #25679d;
+  color: white;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 15px 0;
+}
