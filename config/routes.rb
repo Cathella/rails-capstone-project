@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :transactions
   get 'users/index'
   get 'users/profile'
   get '/profile', to: 'users#profile'
