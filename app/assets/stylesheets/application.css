@@ -207,3 +207,8 @@ form {
   margin-top: 0;
   padding: 15px 0;
 }
+
+.span-pad {
+  padding-left: 4px;
+  padding-right: 4px;
+}
