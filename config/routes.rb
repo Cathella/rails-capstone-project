@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/profile', to: 'users#profile'
 
   # get '/newgroup', to: 'groups#new'
-  # get '/newtransaction', to: 'transactions#new'
+  get '/newtransaction', to: 'transactions#new'
   # get '/etransactions', to: 'transactions#etransaction'
   # get '/memberstransactions', to: 'transactions#members_transactions'
 
