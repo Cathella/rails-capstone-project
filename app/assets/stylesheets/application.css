@@ -212,3 +212,19 @@ form {
   padding-left: 4px;
   padding-right: 4px;
 }
+
+#jumbotron {
+  background: transparent;
+  border: 1px solid #ccc;
+}
+
+.jumbotron > h2:nth-child(1),
+.jumbotron > p:nth-child(2) {
+  color: #ccc;
+}
+
+@media (min-width: 576px) {
+  .jumbotron {
+    padding: 3rem 2rem;
+  }
+}
