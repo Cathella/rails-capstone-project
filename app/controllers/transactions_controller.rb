@@ -6,6 +6,7 @@ class TransactionsController < ApplicationController
   # GET /transactions.json
   def index
     @transactions = Transaction.all
+    @transaction_sum = @transactions.sum(:amount)
   end
 
   # GET /transactions/1
@@ -30,11 +31,9 @@ class TransactionsController < ApplicationController
 
     respond_to do |format|
       if @transaction.save
-        format.html { redirect_to @transaction, notice: 'Transaction was successfully created.' }
-        format.json { render :show, status: :created, location: @transaction }
+        format.html { redirect_to '/transactions', notice: 'Transaction was successfully created.' }
       else
         format.html { render :new }
-        format.json { render json: @transaction.errors, status: :unprocessable_entity }
       end
     end
   end

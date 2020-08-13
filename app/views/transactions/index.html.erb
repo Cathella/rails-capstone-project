@@ -3,8 +3,15 @@
     <p id="notice"><%= notice %></p>
     <h4 class="text-center nav-head">All Transactions</h4>
 
+    <div class="card mb-2">
+      <div class="card-body d-flex justify-content-between rounded-0">
+        <span class="h5 text-muted m-0">Total Spent</span>
+        <span class="h5 text-dark font-weight-bolder m-0"> $<%= @transaction_sum %></span>
+      </div>
+    </div>
+
     <% @transactions.each do |transaction| %>
-      <div class="border bg-white mb-3 mt-3 card-transaction mx-auto">
+      <div class="border bg-white mb-3 mt-3 ml-5 mr-5">
         <div class="row no-gutters">
           <div class="col-2 d-flex justify-content-center">
             <span class="border mt-2 mb-3"><i class="fas fa-exchange-alt h4 pt-2 pr-3 pl-3"></i></span>
@@ -31,7 +38,7 @@
     <% end %>
 
     <a href="/transactions/new" class='w-100'>
-      <div class="d-flex justify-content-center align-items-center logout-btn ml-3 mr-3 new-trans-btn">
+      <div class="d-flex justify-content-center align-items-center logout-btn ml-5 mr-5 new-trans-btn">
         <span class="h6 m-0 py-2">New Transaction</span>
       </div>
     </a>
