@@ -227,6 +227,15 @@ form {
   color: #ccc;
 }
 
+.new-trans-btn {
+  height: 45px;
+}
+
+.greyed-bg {
+  background: #f1f3f2;
+  padding-bottom: 20px;
+}
+
 @media (min-width: 576px) {
   .jumbotron {
     padding: 3rem 2rem;
