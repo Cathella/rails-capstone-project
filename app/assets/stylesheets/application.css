@@ -180,6 +180,10 @@ input, label {
   width: 100%;
 }
 
+label {
+  font-size: 14px;
+}
+
 input {
   height: 45px;
 }
