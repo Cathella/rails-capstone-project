@@ -5,8 +5,8 @@ class TransactionsController < ApplicationController
   # GET /transactions
   # GET /transactions.json
   def index
-    @transactions = Transaction.all
-    @transaction_sum = @transactions.sum(:amount)
+    @transactions = Transaction.all.order(created_at: :desc)
+    @total_sum = @transactions.sum(:amount)
   end
 
   # GET /transactions/1
@@ -43,11 +43,9 @@ class TransactionsController < ApplicationController
   def update
     respond_to do |format|
       if @transaction.update(transaction_params)
-        format.html { redirect_to @transaction, notice: 'Transaction was successfully updated.' }
-        format.json { render :show, status: :ok, location: @transaction }
+        format.html { redirect_to '/transactions', notice: 'Transaction was successfully updated.' }
       else
         format.html { render :edit }
-        format.json { render json: @transaction.errors, status: :unprocessable_entity }
       end
     end
   end

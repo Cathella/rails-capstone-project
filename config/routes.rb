@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :groups
   resources :transactions
   get 'users/index'
   get 'users/profile'
@@ -10,8 +11,6 @@ Rails.application.routes.draw do
   # get '/memberstransactions', to: 'transactions#members_transactions'
 
   devise_for :users, :controllers => { registrations: 'registrations' }
-
-  # root 'users#profile'
 
   devise_scope :user do
     get 'signin', to: 'devise/sessions#new'

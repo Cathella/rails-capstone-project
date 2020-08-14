@@ -236,6 +236,11 @@ form {
   padding-bottom: 20px;
 }
 
+.nav-head span {
+  float: left;
+  margin: 0 0 0 20px;
+}
+
 @media (min-width: 576px) {
   .jumbotron {
     padding: 3rem 2rem;
