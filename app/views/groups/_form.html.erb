@@ -3,7 +3,8 @@
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <div class="form-inputs">
+  <div class="form-inputs mx-2">
+    <%= f.input :name, required: true, label_html: { class: 'text-dark h4' } %>
   </div>
 
   <div class="form-actions">

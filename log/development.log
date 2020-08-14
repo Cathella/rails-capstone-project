@@ -4265,3 +4265,59 @@ FOREIGN KEY ("user_id")
   ↳ bin/rails:9
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+Started GET "/groups/new" for 127.0.0.1 at 2020-08-15 01:02:51 +0300
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_form.html.erb (31.3ms)
+  Rendered groups/new.html.erb within layouts/application (39.6ms)
+Completed 200 OK in 142ms (Views: 90.2ms | ActiveRecord: 1.7ms)
+
+
+  [1m[36mGroup Load (1.6ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/groups" for 127.0.0.1 at 2020-08-15 01:08:42 +0300
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k7b3GQ9TDnoMLmCxH6FxCtBCWHlI0nBui7ikU9AtN8exi0OK1USeMXrzTp+tHR7MzGjldHOKOp4Z8c6QIJ3n0w==", "group"=>{"name"=>"Finance"}, "commit"=>"Create Group"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/groups_controller.rb:27:in `create'
+Started GET "/groups/new" for 127.0.0.1 at 2020-08-15 01:22:27 +0300
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_form.html.erb (12.8ms)
+  Rendered groups/new.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 80ms (Views: 48.9ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2020-08-15 01:22:33 +0300
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UGKT50VrGHIqMAFuO2lLCFfNrCI8xBXpp9jTaXMkABxyXyd0n3yIOVztL0CJ1STOS+cRLwecXxk1kbmqg5TQCA==", "group"=>{"name"=>"Finance"}, "commit"=>"Create Group"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:28
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/groups_controller.rb:31
+  [1m[36mGroup Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "groups" WHERE "groups"."name" = ? LIMIT ?[0m  [["name", "Finance"], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:31
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:31
+  [1m[36mGroup Create (0.8ms)[0m  [1m[32mINSERT INTO "groups" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Finance"], ["user_id", 2], ["created_at", "2020-08-14 22:22:34.041742"], ["updated_at", "2020-08-14 22:22:34.041742"]]
+  ↳ app/controllers/groups_controller.rb:31
+  [1m[35m (10.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/groups_controller.rb:31
+Redirected to http://localhost:3000/groups
+Completed 302 Found in 189ms (ActiveRecord: 18.1ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-15 01:22:34 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  Rendered groups/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" LIMIT ?[0m  [["LIMIT", 11]]
