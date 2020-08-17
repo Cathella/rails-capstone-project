@@ -11,10 +11,17 @@
     </div>
     <div class="row mt-3">
       <div class="col-12">
-        <%= f.input :amount,required: true, label_html: { class: 'text-dark h6' } %>
+        <%= f.input :amount, required: true, label_html: { class: 'text-dark h6' } %>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12">
+        <%= f.association :group, required: false, include_blank: "", label_html: { class: 'text-dark h6' } %>
       </div>
     </div>
   </div>
+
+
 
   <div class="form-actions  mt-3 mx-2">
     <%= f.button :submit, class: "logout-btn" %>

@@ -241,6 +241,19 @@ form {
   margin: 0 0 0 20px;
 }
 
+input[type="radio"] {
+    height: 14px;
+}
+
+.blue-colored {
+  color: #25679d;
+}
+
+select {
+  height: 45px;
+  width: 100%;
+}
+
 @media (min-width: 576px) {
   .jumbotron {
     padding: 3rem 2rem;

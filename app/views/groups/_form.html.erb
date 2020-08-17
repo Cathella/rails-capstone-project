@@ -1,13 +1,41 @@
 
+
 <%= simple_form_for(@group) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs mx-2">
-    <%= f.input :name, required: true, label_html: { class: 'text-dark h4' } %>
+    <div class="row mt-3">
+      <div class="col-12">
+        <%= f.input :name, required: true, label_html: { class: 'text-dark h6' } %>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12">
+        <%= f.label :icon, class: 'text-dark h6'%>
+        <div class="d-flex justify-content-between flex-wrap">
+            <div class="mx-1 my-1 text-center">
+              <i class="fas fa-car fa-2x blue-colored"></i>
+              <%= f.radio_button :icon ,"fa-car"%>
+            </div>
+            <div class="mx-1 my-1 text-center">
+              <i class="fas fa-credit-card fa-2x blue-colored"></i>
+              <%= f.radio_button :icon ,"fa-credit-card"%>
+            </div>
+            <div class="mx-1 my-1 text-center">
+              <i class="fas fa-utensils fa-2x blue-colored"></i>
+              <%= f.radio_button :icon ,"fa-utensils"%>
+            </div>
+            <div class="mx-1 my-1 text-center">
+              <i class="fas fa-shopping-cart fa-2x blue-colored"></i>
+              <%= f.radio_button :icon ,"fa-shopping-cart"%>
+            </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-actions mt-3 mx-2">
+    <%= f.button :submit, class: "logout-btn" %>
   </div>
 <% end %>

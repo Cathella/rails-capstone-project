@@ -4321,3 +4321,1329 @@ Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.3ms)
 
 
   [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/groups" for 127.0.0.1 at 2020-08-15 01:23:55 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  Rendered groups/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-15 09:11:54 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  Rendered groups/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 94ms (Views: 92.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-15 09:52:42 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:9
+  Rendered groups/index.html.erb within layouts/application (17.5ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `icon' for #<Group:0x00007fc789ddb208>):
+    11:       <a href="/groups/<%= group.id %>">
+    12:         <div class="row">
+    13:             <div class="col-5 d-flex justify-content-center">
+    14:               <i class="p-1 fas <%= group.icon %> fa-6x card-img align-self-center text-primary h1 mx-0" ></i>
+    15:             </div>
+    16: 
+    17:             <div class="col-7 ">
+  
+app/views/groups/index.html.erb:14:in `block in _app_views_groups_index_html_erb__542724547062421689_70247494042800'
+app/views/groups/index.html.erb:9:in `_app_views_groups_index_html_erb__542724547062421689_70247494042800'
+Started GET "/groups" for 127.0.0.1 at 2020-08-15 09:55:16 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:9
+  Rendered groups/index.html.erb within layouts/application (429.5ms)
+Completed 500 Internal Server Error in 432ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `group_is_empty?' for #<#<Class:0x00007fc7895cfe88>:0x00007fc78a6ec388>
+Did you mean?  group_path):
+    23:             </div>
+    24:           </div>
+    25:         </a>
+    26:         <%= link_to 'Delete', group, method: :delete, data: {confirm: 'Are you sure?'}, class: "text-danger float-right my-0 pl-2 ml-4 h6 font-weight-bold #{group_is_empty?(group.id) }"%>
+    27:     </div>
+    28:   <% end %>
+    29:   </tbody>
+  
+app/views/groups/index.html.erb:26:in `block in _app_views_groups_index_html_erb__542724547062421689_70247498868720'
+app/views/groups/index.html.erb:9:in `_app_views_groups_index_html_erb__542724547062421689_70247498868720'
+Started GET "/groups" for 127.0.0.1 at 2020-08-15 09:57:05 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:9
+  Rendered groups/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 55ms (Views: 53.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2020-08-15 10:23:31 +0300
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_form.html.erb (12.9ms)
+  Rendered groups/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2020-08-15 10:26:55 +0300
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_form.html.erb (105.1ms)
+  Rendered groups/new.html.erb within layouts/application (106.3ms)
+Completed 200 OK in 378ms (Views: 376.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2020-08-15 10:27:35 +0300
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_form.html.erb (33.8ms)
+  Rendered groups/new.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 135ms (Views: 133.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2020-08-15 10:28:50 +0300
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_form.html.erb (4.7ms)
+  Rendered groups/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-15 11:14:23 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.9ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:9
+  Rendered groups/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 88ms (Views: 80.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2020-08-15 13:07:59 +0300
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_form.html.erb (26.6ms)
+  Rendered groups/new.html.erb within layouts/application (29.5ms)
+Completed 200 OK in 68ms (Views: 66.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-15 13:08:06 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:9
+  Rendered groups/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 51ms (Views: 48.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-15 13:47:14 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  Rendered groups/index.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    12: 
+    13:     
+    14: 
+    15:     <% @transactions.each do |transaction| %>
+    16:       <div class="border bg-white mb-3 mt-3 ml-5 mr-5">
+    17:         <div class="row no-gutters">
+    18:           <div class="col-2 d-flex justify-content-center">
+  
+app/views/groups/index.html.erb:15:in `_app_views_groups_index_html_erb__542724547062421689_70247378034860'
+Started GET "/groups" for 127.0.0.1 at 2020-08-15 13:47:55 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:33
+  Rendered groups/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 25ms (Views: 20.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-15 13:48:53 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:33
+  Rendered groups/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-15 13:49:54 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:33
+  Rendered groups/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-15 13:50:59 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:33
+  Rendered groups/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-15 14:12:01 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:33
+  Rendered groups/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 42ms (Views: 39.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2020-08-15 14:12:10 +0300
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_form.html.erb (27.0ms)
+  Rendered groups/new.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 61ms (Views: 59.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-15 14:12:14 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:33
+  Rendered groups/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 44ms (Views: 41.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2020-08-15 14:12:15 +0300
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_form.html.erb (10.3ms)
+  Rendered groups/new.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 62ms (Views: 59.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-15 14:12:17 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:33
+  Rendered groups/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2020-08-15 14:12:18 +0300
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_form.html.erb (5.0ms)
+  Rendered groups/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 55ms (Views: 49.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-15 14:12:20 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:33
+  Rendered groups/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 42ms (Views: 36.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2020-08-15 14:12:23 +0300
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_form.html.erb (3.2ms)
+  Rendered groups/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-15 14:12:25 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:33
+  Rendered groups/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2020-08-15 14:12:29 +0300
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 90ms (Views: 66.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-15 14:12:32 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:33
+  Rendered groups/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2020-08-15 14:12:35 +0300
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 66ms (Views: 61.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-15 14:14:00 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:33
+  Rendered groups/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 41ms (Views: 39.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-15 14:20:25 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:33
+  Rendered groups/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 47ms (Views: 44.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2020-08-15 14:22:16 +0300
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_form.html.erb (6.0ms)
+  Rendered groups/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2020-08-15 14:29:42 +0300
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_form.html.erb (63.8ms)
+  Rendered groups/new.html.erb within layouts/application (66.5ms)
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `icon' for #<Group:0x00007fc784013918>):
+    10:     <%= f.label :icon, class: 'text-dark h4'%>
+    11: 
+    12:       <div class="d-flex jsutify-contente-between flex-wrap">
+    13:         <div class="mx-1 my-1"><i class="fas fa-glass-cheers fa-2x"></i><%= f.radio_button :icon ,"fa-glass-cheers"%></div>
+    14:         <div class="mx-1 my-1"><i class="fas fa-car fa-2x"></i><%= f.radio_button :icon ,"fa-car"%></div>
+    15:         <div class="mx-1 my-1"><i class="fas fa-plane fa-2x"></i><%= f.radio_button :icon ,"fa-plane"%></div>
+    16:         <div class="mx-1 my-1"><i class="fas fa-trash-alt fa-2x"></i><%= f.radio_button :icon ,"fa-trash-alt"%></div>
+  
+app/views/groups/_form.html.erb:13:in `block in _app_views_groups__form_html_erb__1816198089452597281_70247444956600'
+app/views/groups/_form.html.erb:3:in `_app_views_groups__form_html_erb__1816198089452597281_70247444956600'
+app/views/groups/new.html.erb:5:in `_app_views_groups_new_html_erb__4523431455031163910_70247444942780'
+Started GET "/groups/new" for 127.0.0.1 at 2020-08-15 19:23:47 +0300
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_form.html.erb (12.3ms)
+  Rendered groups/new.html.erb within layouts/application (13.7ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `icon' for #<Group:0x00007fc77c031358>):
+     9: 
+    10:     <%= f.label :icon, class: 'text-dark h4'%>
+    11:       <div class="d-flex justify-content-between flex-wrap">
+    12:         <div class="mx-1 my-1"><i class="fas fa-glass-cheers fa-2x"></i><%= f.radio_button :icon ,"fa-glass-cheers"%></div>
+    13:         <div class="mx-1 my-1"><i class="fas fa-car fa-2x"></i><%= f.radio_button :icon ,"fa-car"%></div>
+    14:         <div class="mx-1 my-1"><i class="fas fa-plane fa-2x"></i><%= f.radio_button :icon ,"fa-plane"%></div>
+    15:         <div class="mx-1 my-1"><i class="fas fa-trash-alt fa-2x"></i><%= f.radio_button :icon ,"fa-trash-alt"%></div>
+  
+app/views/groups/_form.html.erb:12:in `block in _app_views_groups__form_html_erb__1816198089452597281_70247498812120'
+app/views/groups/_form.html.erb:3:in `_app_views_groups__form_html_erb__1816198089452597281_70247498812120'
+app/views/groups/new.html.erb:5:in `_app_views_groups_new_html_erb__4523431455031163910_70247377935100'
+Started GET "/groups/new" for 127.0.0.1 at 2020-08-15 19:28:37 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_form.html.erb (16.0ms)
+  Rendered groups/new.html.erb within layouts/application (16.9ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 3.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `icon' for #<Group:0x00007fc788735af8>):
+     9: 
+    10:     <%= f.label :icon, class: 'text-dark h4'%>
+    11:       <div class="d-flex justify-content-between flex-wrap">
+    12:         <div class="mx-1 my-1"><i class="fas fa-glass-cheers fa-2x"></i><%= f.radio_button :icon ,"fa-glass-cheers"%></div>
+    13:         <div class="mx-1 my-1"><i class="fas fa-car fa-2x"></i><%= f.radio_button :icon ,"fa-car"%></div>
+    14:         <div class="mx-1 my-1"><i class="fas fa-plane fa-2x"></i><%= f.radio_button :icon ,"fa-plane"%></div>
+    15:         <div class="mx-1 my-1"><i class="fas fa-trash-alt fa-2x"></i><%= f.radio_button :icon ,"fa-trash-alt"%></div>
+  
+app/views/groups/_form.html.erb:12:in `block in _app_views_groups__form_html_erb__1816198089452597281_70247483900620'
+app/views/groups/_form.html.erb:3:in `_app_views_groups__form_html_erb__1816198089452597281_70247483900620'
+app/views/groups/new.html.erb:5:in `_app_views_groups_new_html_erb__4523431455031163910_70247484616440'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateGroups (20200814002539)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE "groups"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20200814002539"]]
+  ↳ bin/rails:9
+  [1m[35m (14.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTransactions (20200812174430)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "transactions"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20200812174430"]]
+  ↳ bin/rails:9
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTransactions (20200812174430)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20200812174430_create_transactions.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "amount" integer, "user_id" integer, "group_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_77364e6416"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_3a0679aaf6"
+FOREIGN KEY ("group_id")
+  REFERENCES "groups" ("id")
+)[0m
+  ↳ db/migrate/20200812174430_create_transactions.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_transactions_on_user_id" ON "transactions" ("user_id")[0m
+  ↳ db/migrate/20200812174430_create_transactions.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_transactions_on_group_id" ON "transactions" ("group_id")[0m
+  ↳ db/migrate/20200812174430_create_transactions.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200812174430"]]
+  ↳ bin/rails:9
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateGroups (20200814002539)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "groups" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "icon" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_5e78cd340a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  ↳ db/migrate/20200814002539_create_groups.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_groups_on_user_id" ON "groups" ("user_id")[0m
+  ↳ db/migrate/20200814002539_create_groups.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200814002539"]]
+  ↳ bin/rails:9
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/groups/new" for 127.0.0.1 at 2020-08-15 19:29:35 +0300
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_form.html.erb (168.5ms)
+  Rendered groups/new.html.erb within layouts/application (169.4ms)
+Completed 200 OK in 220ms (Views: 207.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2020-08-17 20:14:12 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_form.html.erb (268.4ms)
+  Rendered groups/new.html.erb within layouts/application (271.7ms)
+Completed 200 OK in 593ms (Views: 569.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2020-08-17 20:16:51 +0300
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_form.html.erb (6.8ms)
+  Rendered groups/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2020-08-17 20:19:56 +0300
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_form.html.erb (5.0ms)
+  Rendered groups/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2020-08-17 20:20:22 +0300
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_form.html.erb (4.1ms)
+  Rendered groups/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2020-08-17 20:20:51 +0300
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_form.html.erb (10.8ms)
+  Rendered groups/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 83ms (Views: 81.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2020-08-17 20:25:04 +0300
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_form.html.erb (6.3ms)
+  Rendered groups/new.html.erb within layouts/application (7.1ms)
+DEPRECATION WARNING: autoprefixer-rails was deprected. Migration guide:
+https://github.com/ai/autoprefixer-rails/wiki/Deprecated (called from _app_views_layouts_application_html_erb__4377207537145935208_70029052953820 at /home/nakitto/odin_on_rails/rails-capstone-project/app/views/layouts/application.html.erb:8)
+Completed 200 OK in 3672ms (Views: 3670.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2020-08-17 20:27:41 +0300
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_form.html.erb (3.5ms)
+  Rendered groups/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 21ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2020-08-17 20:28:14 +0300
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_form.html.erb (7.4ms)
+  Rendered groups/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2020-08-17 20:30:12 +0300
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_form.html.erb (4.8ms)
+  Rendered groups/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2020-08-17 20:33:04 +0300
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_form.html.erb (5.0ms)
+  Rendered groups/new.html.erb within layouts/application (6.1ms)
+DEPRECATION WARNING: autoprefixer-rails was deprected. Migration guide:
+https://github.com/ai/autoprefixer-rails/wiki/Deprecated (called from _app_views_layouts_application_html_erb__4377207537145935208_70029057477740 at /home/nakitto/odin_on_rails/rails-capstone-project/app/views/layouts/application.html.erb:8)
+Completed 200 OK in 918ms (Views: 916.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2020-08-17 20:33:29 +0300
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W4zn7D4qlgahx7JACbxT53m8AOTB1wzf6UfnqQePMKx5sVN/5D0GTdcanG67ADwhZZa96fqPRi97Do1q9z/guA==", "group"=>{"name"=>"Finance", "icon"=>"fa-credit-card"}, "commit"=>"Create Group"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:28
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/groups_controller.rb:31
+  [1m[36mGroup Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "groups" WHERE "groups"."name" = ? LIMIT ?[0m  [["name", "Finance"], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:31
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:31
+  [1m[36mGroup Create (0.4ms)[0m  [1m[32mINSERT INTO "groups" ("name", "icon", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Finance"], ["icon", "fa-credit-card"], ["user_id", 2], ["created_at", "2020-08-17 17:33:29.958636"], ["updated_at", "2020-08-17 17:33:29.958636"]]
+  ↳ app/controllers/groups_controller.rb:31
+  [1m[35m (17.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/groups_controller.rb:31
+Redirected to http://localhost:3000/groups
+Completed 302 Found in 64ms (ActiveRecord: 20.0ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-17 20:33:30 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:33
+  Rendered groups/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 40ms (Views: 38.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-17 20:38:06 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:36
+  Rendered groups/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 73ms (Views: 68.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-17 20:39:04 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:36
+  Rendered groups/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 35ms (Views: 33.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-17 20:40:34 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:36
+  Rendered groups/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-17 20:42:29 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:36
+  Rendered groups/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-17 20:42:53 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:36
+  Rendered groups/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-17 20:43:37 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:36
+  Rendered groups/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-17 20:45:56 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:33
+  Rendered groups/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2020-08-17 20:46:12 +0300
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_form.html.erb (4.9ms)
+  Rendered groups/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2020-08-17 20:46:22 +0300
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3vEPzYRVYmC0GWFtIxgKwtMLQEBjNlQGQSliRQuQkJBNyHK1b+eFJr7cQP+kDmQSmVv+6HeCw7Rg3jltntgWkg==", "group"=>{"name"=>"Transport", "icon"=>"fa-car"}, "commit"=>"Create Group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:28
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/groups_controller.rb:31
+  [1m[36mGroup Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "groups" WHERE "groups"."name" = ? LIMIT ?[0m  [["name", "Transport"], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:31
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:31
+  [1m[36mGroup Create (0.6ms)[0m  [1m[32mINSERT INTO "groups" ("name", "icon", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Transport"], ["icon", "fa-car"], ["user_id", 2], ["created_at", "2020-08-17 17:46:22.966354"], ["updated_at", "2020-08-17 17:46:22.966354"]]
+  ↳ app/controllers/groups_controller.rb:31
+  [1m[35m (13.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/groups_controller.rb:31
+Redirected to http://localhost:3000/groups
+Completed 302 Found in 24ms (ActiveRecord: 14.4ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-17 20:46:23 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:33
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:33
+  Rendered groups/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 47ms (Views: 42.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-17 20:48:08 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:33
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:33
+  Rendered groups/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2020-08-17 20:48:13 +0300
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 27ms (Views: 20.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-17 20:48:16 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:33
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:33
+  Rendered groups/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2020-08-17 20:48:19 +0300
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 39ms (Views: 35.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/transactions" for 127.0.0.1 at 2020-08-17 20:48:20 +0300
+Processing by TransactionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions"[0m
+  ↳ app/controllers/transactions_controller.rb:9
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."created_at" DESC[0m
+  ↳ app/views/transactions/index.html.erb:20
+  Rendered transactions/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 37ms (Views: 26.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2020-08-17 20:48:40 +0300
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 46ms (Views: 41.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-17 20:48:42 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:33
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:33
+  Rendered groups/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-17 20:51:57 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:37
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:37
+  Rendered groups/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-17 20:53:38 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:39
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:39
+  Rendered groups/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2020-08-17 20:53:58 +0300
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2020-08-17 20:59:30 +0300
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 20.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/transactions" for 127.0.0.1 at 2020-08-17 20:59:32 +0300
+Processing by TransactionsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions"[0m
+  ↳ app/controllers/transactions_controller.rb:9
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."created_at" DESC[0m
+  ↳ app/views/transactions/index.html.erb:20
+  Rendered transactions/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 30ms (Views: 25.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2020-08-17 20:59:34 +0300
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/transactions/_form.html.erb:21
+  Rendered transactions/_form.html.erb (28.2ms)
+  Rendered transactions/new.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 68ms (Views: 53.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2020-08-17 21:00:36 +0300
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/transactions/_form.html.erb:21
+  Rendered transactions/_form.html.erb (35.3ms)
+  Rendered transactions/new.html.erb within layouts/application (36.3ms)
+Completed 200 OK in 62ms (Views: 59.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2020-08-17 21:03:32 +0300
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/transactions/_form.html.erb:19
+  Rendered transactions/_form.html.erb (8.6ms)
+  Rendered transactions/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2020-08-17 21:07:27 +0300
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/transactions/_form.html.erb:19
+  Rendered transactions/_form.html.erb (7.7ms)
+  Rendered transactions/new.html.erb within layouts/application (8.7ms)
+DEPRECATION WARNING: autoprefixer-rails was deprected. Migration guide:
+https://github.com/ai/autoprefixer-rails/wiki/Deprecated (called from _app_views_layouts_application_html_erb__4377207537145935208_70029057260960 at /home/nakitto/odin_on_rails/rails-capstone-project/app/views/layouts/application.html.erb:8)
+Completed 200 OK in 1072ms (Views: 1069.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2020-08-17 21:08:03 +0300
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dNjaC4G59Rqbdl1sI+RSwr9NsD93tT4ImFllCrkad/RW5W6YW65lUe2rc0KRWD0Eo2cNMkztdPgKEA/JSaqn4A==", "transaction"=>{"name"=>"Transport to uncles", "amount"=>"10", "group_id"=>"2"}, "commit"=>"Create Transaction"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :group_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:33
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:33
+  [1m[36mTransaction Create (0.3ms)[0m  [1m[32mINSERT INTO "transactions" ("name", "amount", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Transport to uncles"], ["amount", 10], ["user_id", 2], ["created_at", "2020-08-17 18:08:03.656366"], ["updated_at", "2020-08-17 18:08:03.656366"]]
+  ↳ app/controllers/transactions_controller.rb:33
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/transactions_controller.rb:33
+Redirected to http://localhost:3000/transactions
+Completed 302 Found in 17ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/transactions" for 127.0.0.1 at 2020-08-17 21:08:03 +0300
+Processing by TransactionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions"[0m
+  ↳ app/controllers/transactions_controller.rb:9
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."created_at" DESC[0m
+  ↳ app/views/transactions/index.html.erb:20
+  Rendered transactions/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 83ms (Views: 79.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/transactions" for 127.0.0.1 at 2020-08-17 21:13:45 +0300
+Processing by TransactionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions"[0m
+  ↳ app/controllers/transactions_controller.rb:9
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."created_at" DESC[0m
+  ↳ app/views/transactions/index.html.erb:20
+  Rendered transactions/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 31ms (Views: 28.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/transactions" for 127.0.0.1 at 2020-08-17 21:14:02 +0300
+Processing by TransactionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions"[0m
+  ↳ app/controllers/transactions_controller.rb:9
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."created_at" DESC[0m
+  ↳ app/views/transactions/index.html.erb:20
+  Rendered transactions/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 34ms (Views: 29.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2020-08-17 21:33:01 +0300
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 46ms (Views: 42.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-17 21:33:13 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:39
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:39
+  Rendered groups/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 88ms (Views: 78.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2020-08-17 21:33:30 +0300
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_form.html.erb (22.1ms)
+  Rendered groups/new.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 56ms (Views: 53.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2020-08-17 21:33:43 +0300
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z2J1olzxYGKQlCY97T5eXUjZgvs+mPFjcReN2brlmoVcWwjat0OHJJpRB69qKDCNAok8UyosZtFQ4NbxL60chw==", "group"=>{"name"=>"Food", "icon"=>"fa-utensils"}, "commit"=>"Create Group"}
+  [1m[36mUser Load (9.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/groups_controller.rb:31
+  [1m[36mGroup Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "groups" WHERE "groups"."name" = ? LIMIT ?[0m  [["name", "Food"], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:31
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:31
+  [1m[36mGroup Create (0.8ms)[0m  [1m[32mINSERT INTO "groups" ("name", "icon", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Food"], ["icon", "fa-utensils"], ["user_id", 2], ["created_at", "2020-08-17 18:33:43.996780"], ["updated_at", "2020-08-17 18:33:43.996780"]]
+  ↳ app/controllers/groups_controller.rb:31
+  [1m[35m (14.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/groups_controller.rb:31
+Redirected to http://localhost:3000/groups
+Completed 302 Found in 62ms (ActiveRecord: 26.1ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-17 21:33:44 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:39
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:39
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:39
+  Rendered groups/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 68ms (Views: 64.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2020-08-17 21:33:56 +0300
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 47ms (Views: 36.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/transactions" for 127.0.0.1 at 2020-08-17 21:33:59 +0300
+Processing by TransactionsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions"[0m
+  ↳ app/controllers/transactions_controller.rb:9
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."created_at" DESC[0m
+  ↳ app/views/transactions/index.html.erb:20
+  Rendered transactions/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 83ms (Views: 68.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2020-08-17 21:34:02 +0300
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering transactions/new.html.erb within layouts/application
+  [1m[36mGroup Load (0.9ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/transactions/_form.html.erb:19
+  Rendered transactions/_form.html.erb (49.0ms)
+  Rendered transactions/new.html.erb within layouts/application (52.5ms)
+Completed 200 OK in 126ms (Views: 101.0ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2020-08-17 21:34:24 +0300
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z0f/hrNM0UB2YU4ql4oyRMZE9moF3QaISkxLYm8q2X+y0AlD+1SfsBe4puWXkVWxSLcW9hidfIDFNeBirvDUaQ==", "transaction"=>{"name"=>"Have lunch with sunil", "amount"=>"50", "group_id"=>"3"}, "commit"=>"Create Transaction"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :group_id
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/transactions_controller.rb:33
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:33
+  [1m[36mTransaction Create (1.6ms)[0m  [1m[32mINSERT INTO "transactions" ("name", "amount", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Have lunch with sunil"], ["amount", 50], ["user_id", 2], ["created_at", "2020-08-17 18:34:24.940640"], ["updated_at", "2020-08-17 18:34:24.940640"]]
+  ↳ app/controllers/transactions_controller.rb:33
+  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/transactions_controller.rb:33
+Redirected to http://localhost:3000/transactions
+Completed 302 Found in 32ms (ActiveRecord: 11.6ms)
+
+
+Started GET "/transactions" for 127.0.0.1 at 2020-08-17 21:34:25 +0300
+Processing by TransactionsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions"[0m
+  ↳ app/controllers/transactions_controller.rb:9
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."created_at" DESC[0m
+  ↳ app/views/transactions/index.html.erb:20
+  Rendered transactions/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 82ms (Views: 64.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2020-08-17 21:34:41 +0300
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 54ms (Views: 44.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-17 21:34:43 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:39
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:39
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:39
+  Rendered groups/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 62ms (Views: 58.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2020-08-17 21:36:31 +0300
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 76ms (Views: 73.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/transactions" for 127.0.0.1 at 2020-08-17 21:36:32 +0300
+Processing by TransactionsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions"[0m
+  ↳ app/controllers/transactions_controller.rb:9
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."created_at" DESC[0m
+  ↳ app/views/transactions/index.html.erb:20
+  Rendered transactions/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 125ms (Views: 103.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/transactions" for 127.0.0.1 at 2020-08-17 21:51:58 +0300
+Processing by TransactionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions"[0m
+  ↳ app/controllers/transactions_controller.rb:9
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."created_at" DESC[0m
+  ↳ app/views/transactions/index.html.erb:20
+  Rendered transactions/index.html.erb within layouts/application (109.0ms)
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `icon' for #<Transaction:0x00007f61d18d5e20>):
+    21:       <div class="border bg-white mb-3 mt-3 ml-5 mr-5">
+    22:         <div class="row no-gutters">
+    23:           <div class="col-2 d-flex justify-content-center">
+    24:             <i class="fas <%= transaction.icon %> fa-2x pr-3 pl-3 mt-3 blue-colored"></i>
+    25:             <span class="border mt-2 mb-3">
+    26:               <i class="fas fa-exchange-alt h4 pt-2 pr-3 pl-3"></i>
+    27:             </span>
+  
+app/views/transactions/index.html.erb:24:in `block in _app_views_transactions_index_html_erb___3954911646761473822_70029051988180'
+app/views/transactions/index.html.erb:20:in `_app_views_transactions_index_html_erb___3954911646761473822_70029051988180'
+Started GET "/transactions" for 127.0.0.1 at 2020-08-17 21:52:47 +0300
+Processing by TransactionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions"[0m
+  ↳ app/controllers/transactions_controller.rb:9
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."created_at" DESC[0m
+  ↳ app/views/transactions/index.html.erb:20
+  Rendered transactions/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `icon' for nil:NilClass):
+    21:       <div class="border bg-white mb-3 mt-3 ml-5 mr-5">
+    22:         <div class="row no-gutters">
+    23:           <div class="col-2 d-flex justify-content-center">
+    24:             <i class="fas <%= transaction.group.icon %> fa-2x pr-3 pl-3 mt-3 blue-colored"></i>
+    25:             <span class="border mt-2 mb-3">
+    26:               <i class="fas fa-exchange-alt h4 pt-2 pr-3 pl-3"></i>
+    27:             </span>
+  
+app/views/transactions/index.html.erb:24:in `block in _app_views_transactions_index_html_erb___3954911646761473822_70029058194800'
+app/views/transactions/index.html.erb:20:in `_app_views_transactions_index_html_erb___3954911646761473822_70029058194800'
+Started GET "/transactions" for 127.0.0.1 at 2020-08-17 21:53:50 +0300
+Processing by TransactionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions"[0m
+  ↳ app/controllers/transactions_controller.rb:9
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."created_at" DESC[0m
+  ↳ app/views/transactions/index.html.erb:20
+  Rendered transactions/index.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `icon' for #<Transaction:0x00007f61d2006a28>):
+    21:       <div class="border bg-white mb-3 mt-3 ml-5 mr-5">
+    22:         <div class="row no-gutters">
+    23:           <div class="col-2 d-flex justify-content-center">
+    24:             <i class="fas <%= transaction.icon %> fa-2x pr-3 pl-3 mt-3 blue-colored"></i>
+    25:           </div>
+    26: 
+    27:           <div class="col-8 ">
+  
+app/views/transactions/index.html.erb:24:in `block in _app_views_transactions_index_html_erb___3954911646761473822_70029055849160'
+app/views/transactions/index.html.erb:20:in `_app_views_transactions_index_html_erb___3954911646761473822_70029055849160'
+Started GET "/transactions" for 127.0.0.1 at 2020-08-17 21:58:55 +0300
+Processing by TransactionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions"[0m
+  ↳ app/controllers/transactions_controller.rb:9
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."created_at" DESC[0m
+  ↳ app/views/transactions/index.html.erb:20
+  Rendered transactions/index.html.erb within layouts/application (19.5ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `icon' for #<Transaction:0x00007f61d11b7f30>):
+    21:       <div class="border bg-white mb-3 mt-3 ml-5 mr-5">
+    22:         <div class="row no-gutters">
+    23:           <div class="col-2 d-flex justify-content-center">
+    24:             <i class="fas <%= transaction.icon %> fa-2x pr-3 pl-3 mt-3 blue-colored"></i>
+    25:           </div>
+    26: 
+    27:           <div class="col-8 ">
+  
+app/views/transactions/index.html.erb:24:in `block in _app_views_transactions_index_html_erb___3954911646761473822_70029047167440'
+app/views/transactions/index.html.erb:20:in `_app_views_transactions_index_html_erb___3954911646761473822_70029047167440'
+Started GET "/profile" for 127.0.0.1 at 2020-08-17 21:59:12 +0300
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 25ms (Views: 21.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-08-17 21:59:17 +0300
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:39
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:39
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:39
+  Rendered groups/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 84ms (Views: 80.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2020-08-17 21:59:22 +0300
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/profile.html.erb within layouts/application
+  Rendered users/profile.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 53ms (Views: 40.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/transactions" for 127.0.0.1 at 2020-08-17 21:59:24 +0300
+Processing by TransactionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions"[0m
+  ↳ app/controllers/transactions_controller.rb:9
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."created_at" DESC[0m
+  ↳ app/views/transactions/index.html.erb:20
+  Rendered transactions/index.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `icon' for #<Transaction:0x00007f61d19c3940>):
+    21:       <div class="border bg-white mb-3 mt-3 ml-5 mr-5">
+    22:         <div class="row no-gutters">
+    23:           <div class="col-2 d-flex justify-content-center">
+    24:             <i class="fas <%= transaction.icon %> fa-2x pr-3 pl-3 mt-3 blue-colored"></i>
+    25:           </div>
+    26: 
+    27:           <div class="col-8 ">
+  
+app/views/transactions/index.html.erb:24:in `block in _app_views_transactions_index_html_erb___3954911646761473822_70029052508540'
+app/views/transactions/index.html.erb:20:in `_app_views_transactions_index_html_erb___3954911646761473822_70029052508540'
+Started GET "/transactions" for 127.0.0.1 at 2020-08-17 22:03:01 +0300
+Processing by TransactionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions"[0m
+  ↳ app/controllers/transactions_controller.rb:9
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."created_at" DESC[0m
+  ↳ app/views/transactions/index.html.erb:20
+  Rendered transactions/index.html.erb within layouts/application (41.5ms)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 2.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `icon' for nil:NilClass):
+    21:       <div class="border bg-white mb-3 mt-3 ml-5 mr-5">
+    22:         <div class="row no-gutters">
+    23:           <div class="col-2 d-flex justify-content-center">
+    24:             <i class="fas <%= transaction.group.icon %> fa-2x pr-3 pl-3 mt-3 blue-colored"></i>
+    25:           </div>
+    26: 
+    27:           <div class="col-8 ">
+  
+app/views/transactions/index.html.erb:24:in `block in _app_views_transactions_index_html_erb___3954911646761473822_70028972138220'
+app/views/transactions/index.html.erb:20:in `_app_views_transactions_index_html_erb___3954911646761473822_70028972138220'

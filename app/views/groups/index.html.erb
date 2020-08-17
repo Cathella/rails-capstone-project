@@ -1,25 +1,51 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <div class="inside-width greyed-bg">
+    <p id="notice"><%= notice %></p>
+    <h4 class="text-center nav-head">
+      <span>
+        <a href="/profile">
+          <i class="fas fa-arrow-left h3 text-white"></i>
+        </a>
+      </span>
+      Groups
+    </h4>
 
-<h1>Groups</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
     <% @groups.each do |group| %>
-      <tr>
-        <td><%= link_to 'Show', group %></td>
-        <td><%= link_to 'Edit', edit_group_path(group) %></td>
-        <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="border bg-white mb-3 mt-3 ml-5 mr-5">
+        <div class="row no-gutters">
+          <div class="col-2 d-flex justify-content-center">
+              <i class="fas <%= group.icon %> fa-2x pr-3 pl-3 mt-3 blue-colored"></i>
+          </div>
+
+          <div class="col-7">
+            <div class="card-body mx-0 px-3 py-2">
+              <div class= "w-100 align-items-center">
+                <span class="card-title h6 text-capitalize text-muted m-0"><%= group.name %></span> <br>
+              </div>
+
+              <div class="d-flex mt-1">
+                <p class="card-text text-muted mb-0 h6 ">
+                  <small>
+                    <%= group.created_at.strftime('%d %b %Y') %>
+                  </small>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-3 d-flex justify-content-center pt-1">
+              <span class="card-text h6 mt-3 text-muted font-italic">
+                <small>
+                  by <%= group.user.username %>
+                </small>
+              </span>
+          </div>
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
 
-<br>
-
-<%= link_to 'New Group', new_group_path %>
+    <a href="/groups/new" class='w-100'>
+      <div class="d-flex justify-content-center align-items-center logout-btn ml-5 mr-5 new-trans-btn">
+        <span class="h6 m-0 py-2">New group</span>
+      </div>
+    </a>
