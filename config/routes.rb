@@ -5,11 +5,6 @@ Rails.application.routes.draw do
   get 'users/profile'
   get '/profile', to: 'users#profile'
 
-  # get '/newgroup', to: 'groups#new'
-  get '/newtransaction', to: 'transactions#new'
-  # get '/etransactions', to: 'transactions#etransaction'
-  # get '/memberstransactions', to: 'transactions#members_transactions'
-
   devise_for :users, :controllers => { registrations: 'registrations' }
 
   devise_scope :user do
