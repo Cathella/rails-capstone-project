@@ -100,8 +100,12 @@ label {
   width: 100%;
   min-width: 375px;
   min-height: 100%;
+}
+
+.blue-bg {
   background: rgb(48,132,193);
   background: linear-gradient(15deg, rgba(48,132,193,1) 0%, rgba(19,50,94,1) 100%);
+  padding: 50px 50px 100px 40px;
 }
 
 .cont-background{
@@ -229,6 +233,7 @@ form {
 
 .new-trans-btn {
   height: 45px;
+  margin-top: 25px;
 }
 
 .greyed-bg {
