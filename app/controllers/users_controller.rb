@@ -1,11 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, except: [:index]
 
-  def index
+  def index; end
 
-  end
-
-  def profile
-
-  end
+  def profile; end
 end

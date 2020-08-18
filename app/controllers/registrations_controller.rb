@@ -1,5 +1,4 @@
 class RegistrationsController < Devise::RegistrationsController
-
   private
 
   def sign_up_params
@@ -17,5 +16,4 @@ class RegistrationsController < Devise::RegistrationsController
   def after_sign_in_path_for(_resource)
     '/profile'
   end
-
 end
