@@ -5,7 +5,8 @@ class TransactionsController < ApplicationController
   # GET /transactions
   # GET /transactions.json
   def index
-    @transactions = Transaction.all.order(created_at: :desc)
+    # @transactions = Transaction.all.order(created_at: :desc)
+    @transactions = current_user.transactions.order(created_at: :desc)
     @total_sum = @transactions.sum(:amount)
   end
 
@@ -58,6 +59,11 @@ class TransactionsController < ApplicationController
       format.html { redirect_to transactions_url, notice: 'Transaction was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def member_transactions
+    @members = Transaction.by_user
+    @members_sum = Transaction.all.sum(:amount)
   end
 
   private

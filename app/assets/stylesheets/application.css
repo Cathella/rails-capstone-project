@@ -103,9 +103,8 @@ label {
 }
 
 .blue-bg {
-  background: rgb(48,132,193);
   background: linear-gradient(15deg, rgba(48,132,193,1) 0%, rgba(19,50,94,1) 100%);
-  padding: 50px 50px 100px 40px;
+  padding: 50px 50px 80px 40px;
 }
 
 .cont-background{
@@ -222,7 +221,7 @@ form {
 }
 
 #jumbotron {
-  background: transparent;
+  background: linear-gradient(15deg, rgba(48,132,193,1) 0%, rgba(19,50,94,1) 100%);
   border: 1px solid #ccc;
 }
 
