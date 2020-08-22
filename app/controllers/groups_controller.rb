@@ -4,12 +4,17 @@ class GroupsController < ApplicationController
   # GET /groups
   # GET /groups.json
   def index
-    @groups = Group.all
+    # @groups = Group.all
+    @groups = Group.order(name: :asc).all
   end
 
   # GET /groups/1
   # GET /groups/1.json
-  def show; end
+  def show
+    @group_transactions = Transaction.grouped_display(params[:id])
+    @group_transactions = @group_transactions.order(created_at: :desc)
+    @group_transaction_sum = @group_transactions.sum(:amount)
+  end
 
   # GET /groups/new
   def new
@@ -28,10 +33,10 @@ class GroupsController < ApplicationController
     respond_to do |format|
       if @group.save
         format.html { redirect_to '/groups', notice: 'Group was successfully created.' }
-        format.json { render :show, status: :created, location: @group }
+        # format.json { render :show, status: :created, location: @group }
       else
         format.html { render :new }
-        format.json { render json: @group.errors, status: :unprocessable_entity }
+        # format.json { render json: @group.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -42,10 +47,10 @@ class GroupsController < ApplicationController
     respond_to do |format|
       if @group.update(group_params)
         format.html { redirect_to '/groups', notice: 'Group was successfully updated.' }
-        format.json { render :show, status: :ok, location: @group }
+        # format.json { render :show, status: :ok, location: @group }
       else
         format.html { render :edit }
-        format.json { render json: @group.errors, status: :unprocessable_entity }
+        # format.json { render json: @group.errors, status: :unprocessable_entity }
       end
     end
   end
