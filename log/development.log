@@ -10022,3 +10022,121 @@ Did you mean?  name
   
 app/views/transactions/index.html.erb:31:in `block in _app_views_transactions_index_html_erb__822475049528183933_70128610353720'
 app/views/transactions/index.html.erb:20:in `_app_views_transactions_index_html_erb__822475049528183933_70128610353720'
+Started GET "/transactions" for 127.0.0.1 at 2020-08-22 19:46:00 +0300
+Processing by TransactionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" INNER JOIN "groups" ON "groups"."id" = "transactions"."group_id" INNER JOIN "users" ON "users"."id" = "transactions"."user_id" WHERE "transactions"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/transactions_controller.rb:13
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT transactions.name, transactions.id, transactions.amount, transactions.user_id, transactions.created_at, groups.icon FROM "transactions" INNER JOIN "groups" ON "groups"."id" = "transactions"."group_id" INNER JOIN "users" ON "users"."id" = "transactions"."user_id" WHERE "transactions"."user_id" = ? ORDER BY "transactions"."created_at" DESC[0m  [["user_id", 3]]
+  ↳ app/views/transactions/index.html.erb:20
+  Rendered transactions/index.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (missing attribute: group_id):
+    28:             <div class="card-body mx-0 px-3 py-2">
+    29:               <div class= "w-100 align-items-center">
+    30:                 <span class="card-title h6 text-capitalize text-muted m-0"> <%= transaction.name %></span> <br>
+    31:                 <span class="card-text h6 text-capitalize text-muted font-italic my-0"> Category: <%= transaction.group.name %></span>
+    32:               </div>
+    33: 
+    34:               <div class="d-flex mt-1">
+  
+app/views/transactions/index.html.erb:31:in `block in _app_views_transactions_index_html_erb__822475049528183933_70128568245140'
+app/views/transactions/index.html.erb:20:in `_app_views_transactions_index_html_erb__822475049528183933_70128568245140'
+Started GET "/transactions" for 127.0.0.1 at 2020-08-22 19:50:42 +0300
+Processing by TransactionsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" INNER JOIN "groups" ON "groups"."id" = "transactions"."group_id" INNER JOIN "users" ON "users"."id" = "transactions"."user_id" WHERE "transactions"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/transactions_controller.rb:13
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT transactions.name, transactions.id, transactions.amount, transactions.user_id, transactions.created_at, groups.icon FROM "transactions" INNER JOIN "groups" ON "groups"."id" = "transactions"."group_id" INNER JOIN "users" ON "users"."id" = "transactions"."user_id" WHERE "transactions"."user_id" = ? ORDER BY "transactions"."created_at" DESC[0m  [["user_id", 3]]
+  ↳ app/views/transactions/index.html.erb:20
+  Rendered transactions/index.html.erb within layouts/application (13.1ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `groups' for #<Transaction:0x00007f902992b9e8>
+Did you mean?  group
+               group=):
+    28:             <div class="card-body mx-0 px-3 py-2">
+    29:               <div class= "w-100 align-items-center">
+    30:                 <span class="card-title h6 text-capitalize text-muted m-0"> <%= transaction.name %></span> <br>
+    31:                 <span class="card-text h6 text-capitalize text-muted font-italic my-0"> Category: <%= transaction.groups.name %></span>
+    32:               </div>
+    33: 
+    34:               <div class="d-flex mt-1">
+  
+app/views/transactions/index.html.erb:31:in `block in _app_views_transactions_index_html_erb__822475049528183933_70128574664180'
+app/views/transactions/index.html.erb:20:in `_app_views_transactions_index_html_erb__822475049528183933_70128574664180'
+  [1m[36mTransaction Load (1.9ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" ORDER BY "transactions"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/transactions" for 127.0.0.1 at 2020-08-22 19:59:43 +0300
+Processing by TransactionsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" INNER JOIN "groups" ON "groups"."id" = "transactions"."group_id" INNER JOIN "users" ON "users"."id" = "transactions"."user_id" WHERE "transactions"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/transactions_controller.rb:13
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT transactions.name, transactions.id, transactions.amount, transactions.user_id, transactions.created_at, groups.icon FROM "transactions" INNER JOIN "groups" ON "groups"."id" = "transactions"."group_id" INNER JOIN "users" ON "users"."id" = "transactions"."user_id" WHERE "transactions"."user_id" = ? ORDER BY "transactions"."created_at" DESC[0m  [["user_id", 3]]
+  ↳ app/views/transactions/index.html.erb:20
+  Rendered transactions/index.html.erb within layouts/application (14.1ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (missing attribute: group_id):
+    28:             <div class="card-body mx-0 px-3 py-2">
+    29:               <div class= "w-100 align-items-center">
+    30:                 <span class="card-title h6 text-capitalize text-muted m-0"> <%= transaction.name %></span> <br>
+    31:                 <span class="card-text h6 text-capitalize text-muted font-italic my-0"> Category: <%= transaction.group.name %></span>
+    32:               </div>
+    33: 
+    34:               <div class="d-flex mt-1">
+  
+app/views/transactions/index.html.erb:31:in `block in _app_views_transactions_index_html_erb__822475049528183933_70128562196480'
+app/views/transactions/index.html.erb:20:in `_app_views_transactions_index_html_erb__822475049528183933_70128562196480'
+Started GET "/transactions" for 127.0.0.1 at 2020-08-23 09:16:12 +0300
+Processing by TransactionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" INNER JOIN "groups" ON "groups"."id" = "transactions"."group_id" INNER JOIN "users" ON "users"."id" = "transactions"."user_id" WHERE "transactions"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/transactions_controller.rb:13
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT transactions.name, transactions.id, transactions.amount, transactions.user_id, transactions.created_at, groups.icon, groups.name FROM "transactions" INNER JOIN "groups" ON "groups"."id" = "transactions"."group_id" INNER JOIN "users" ON "users"."id" = "transactions"."user_id" WHERE "transactions"."user_id" = ? ORDER BY "transactions"."created_at" DESC[0m  [["user_id", 3]]
+  ↳ app/views/transactions/index.html.erb:20
+  Rendered transactions/index.html.erb within layouts/application (9.2ms)
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 3.3ms)
+
+
+  
+ActionView::Template::Error (missing attribute: group_id):
+    28:             <div class="card-body mx-0 px-3 py-2">
+    29:               <div class= "w-100 align-items-center">
+    30:                 <span class="card-title h6 text-capitalize text-muted m-0"> <%= transaction.name %></span> <br>
+    31:                 <span class="card-text h6 text-capitalize text-muted font-italic my-0"> Category: <%= transaction.group.name %></span>
+    32:               </div>
+    33: 
+    34:               <div class="d-flex mt-1">
+  
+app/views/transactions/index.html.erb:31:in `block in _app_views_transactions_index_html_erb__822475049528183933_70128571409380'
+app/views/transactions/index.html.erb:20:in `_app_views_transactions_index_html_erb__822475049528183933_70128571409380'
+Started GET "/transactions" for 127.0.0.1 at 2020-08-23 09:18:07 +0300
+Processing by TransactionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("transactions"."amount") FROM "transactions" INNER JOIN "groups" ON "groups"."id" = "transactions"."group_id" INNER JOIN "users" ON "users"."id" = "transactions"."user_id" WHERE "transactions"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/transactions_controller.rb:13
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT transactions.name, transactions.id, transactions.amount, transactions.user_id, transactions.created_at, groups.icon, groups.name as gname FROM "transactions" INNER JOIN "groups" ON "groups"."id" = "transactions"."group_id" INNER JOIN "users" ON "users"."id" = "transactions"."user_id" WHERE "transactions"."user_id" = ? ORDER BY "transactions"."created_at" DESC[0m  [["user_id", 3]]
+  ↳ app/views/transactions/index.html.erb:20
+  Rendered transactions/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 69ms (Views: 39.6ms | ActiveRecord: 3.4ms)
+
+

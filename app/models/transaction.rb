@@ -5,7 +5,7 @@ class Transaction < ApplicationRecord
   belongs_to :group, optional: true
 
   s_str = 'transactions.name, transactions.id, transactions.amount, transactions.user_id, transactions.created_at'
-  s_str2 = ', groups.icon'
+  s_str2 = ', groups.icon, groups.name as gname'
   s_str3 = ''
   s_str4 = 'users.name as uname, sum(transactions.amount) as tot_amount'
 
