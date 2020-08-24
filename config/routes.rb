@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   get 'users/index'
   get 'users/profile'
   get '/profile', to: 'users#profile'
-  # get '/members', to: 'transactions#member_transactions'
   get '/etransactions', to: 'transactions#etransaction'
+  get '/memberstransactions', to: 'transactions#members_transactions'
 
   devise_for :users, :controllers => { registrations: 'registrations' }
 

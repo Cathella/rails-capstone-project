@@ -78,7 +78,7 @@ class TransactionsController < ApplicationController
     @ext_transaction_sum = @ext_user_transaction.sum(:amount)
   end
 
-  def member_transactions
+  def members_transactions
     @members = Transaction.by_user
     @members_sum = Transaction.all.sum(:amount)
   end
