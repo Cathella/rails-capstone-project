@@ -9,8 +9,8 @@ class Transaction < ApplicationRecord
   s_str3 = ''
   s_str4 = 'users.username as uname, sum(transactions.amount) as tot_amount'
 
-  scope :grouped_display, -> (gid) { where(group_id: gid).joins(:group).joins(:user).select(s_str + s_str2) }
-  scope :int_display, -> (uid) { where(user_id: uid).joins(:group).joins(:user).select(s_str + s_str2) }
-  scope :ext_display, -> (uid) { where(user_id: uid, group_id: nil).joins(:user).select(s_str + s_str3) }
+  scope :grouped_display, ->(gid) { where(group_id: gid).joins(:group).joins(:user).select(s_str + s_str2) }
+  scope :int_display, ->(uid) { where(user_id: uid).joins(:group).joins(:user).select(s_str + s_str2) }
+  scope :ext_display, ->(uid) { where(user_id: uid, group_id: nil).joins(:user).select(s_str + s_str3) }
   scope :by_user, -> { joins(:user).select(s_str4).group(:uname) }
 end
