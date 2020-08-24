@@ -1,0 +1,16 @@
+html {
+  height: 100%;
+  min-width: 375px;
+}
+
+body {
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  min-width: 375px;
+  overflow-x: hidden;
+  background-color: rgb(241, 243, 242);
+}
