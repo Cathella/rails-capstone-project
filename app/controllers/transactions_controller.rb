@@ -2,21 +2,18 @@ class TransactionsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_transaction, only: %i[show edit update destroy]
 
-
   def index
     @user_transactions = Transaction.int_display(current_user.id).order(created_at: :desc)
     @transaction_sum = @user_transactions.sum(:amount)
   end
 
-  def show;
-  end
+  def show; end
 
   def new
     @transaction = Transaction.new
   end
 
-  def edit;
-  end
+  def edit; end
 
   def create
     @transaction = Transaction.new(transaction_params)
