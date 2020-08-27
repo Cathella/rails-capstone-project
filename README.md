@@ -2,7 +2,6 @@
 
 This is my Ruby on Rails Capstone Microverse Project a Group Transactions mobile application.
 
-
 # Live Demo
 
 [Live demo]()
@@ -10,9 +9,7 @@ This is my Ruby on Rails Capstone Microverse Project a Group Transactions mobile
 # What it does
 
 - The user signs up and logs in to the app.
-
 - The user is presented with a profile page with a menu that has links to the user's transactions, user's transaction groups, ungrouped transactions made by the user and other users or members transactions that have been added in the app.
-
 - On the user transactions index page, the user can create or add a new transaction made and as more transactions are added, the total amount of money spent is displayed at the top of the app.
 
 # How to run this project
