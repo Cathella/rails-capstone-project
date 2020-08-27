@@ -5,7 +5,6 @@ html {
 
 body {
   color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
   height: 100%;
@@ -15,7 +14,10 @@ body {
   background-color: rgb(241, 243, 242);
 }
 
-p, ol, ul, td {
+p,
+ol,
+ul,
+td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -47,6 +49,7 @@ td {
 
 label {
   display: block;
+  font-size: 14px;
 }
 
 .background-profile {
@@ -56,7 +59,7 @@ label {
 }
 
 .blue-bg {
-  background: linear-gradient(15deg, rgba(48,132,193,1) 0%, rgba(19,50,94,1) 100%);
+  background: linear-gradient(15deg, rgba(48, 132, 193, 1) 0%, rgba(19, 50, 94, 1) 100%);
   padding: 50px 50px 80px 40px;
 }
 
@@ -66,24 +69,23 @@ label {
   min-width: 375px;
 }
 
-.card-transaction{
+.card-transaction {
   width: 95%;
   min-width: 375px;
 }
 
-.total-card-transaction{
+.total-card-transaction {
   margin-top: 35%;
   min-width: 375px;
 }
 
-.cont-button{
+.cont-button {
   background: rgb(95, 181, 35);
   min-height: 76px;
   min-width: 375px;
-
 }
 
-.espace-button{
+.espace-button {
   min-height: 60px;
   min-width: 375px !important;
 }
@@ -97,26 +99,26 @@ label {
   visibility: hidden;
 }
 
-.button-transaction{
+.button-transaction {
   margin-top: 10px;
   margin-bottom: 8px;
 }
 
-.button-group{
+.button-group {
   margin-top: 10px;
   margin-bottom: 25px;
 }
 
-.text-grey{
+.text-grey {
   color: lightgray;
 }
 
-.sticky-container{
+.sticky-container {
   min-height: 88%;
   background-color: rgb(241, 243, 242);
 }
 
-.sticky-container2{
+.sticky-container2 {
   min-height: 100%;
   background-color: rgb(241, 243, 242);
 }
@@ -132,12 +134,9 @@ label {
   font-size: 14px;
 }
 
-input, label {
-  width: 100%;
-}
-
+input,
 label {
-  font-size: 14px;
+  width: 100%;
 }
 
 input {
@@ -174,7 +173,7 @@ form {
 }
 
 #jumbotron {
-  background: linear-gradient(15deg, rgba(48,132,193,1) 0%, rgba(19,50,94,1) 100%);
+  background: linear-gradient(15deg, rgba(48, 132, 193, 1) 0%, rgba(19, 50, 94, 1) 100%);
   border: 1px solid #ccc;
 }
 
@@ -199,7 +198,7 @@ form {
 }
 
 input[type="radio"] {
-    height: 14px;
+  height: 14px;
 }
 
 .blue-colored {
