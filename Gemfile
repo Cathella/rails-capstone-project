@@ -57,7 +57,7 @@ group :development do
 end
 
 group :production do
-  gem 'pg'
+  gem "postgres-pr"
 end
 
 group :test do
