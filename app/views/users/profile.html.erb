@@ -1,0 +1,54 @@
+<div class="background-profile container-fluid ">
+  <div class="container-fluid">
+    <div class="inside-width blue-bg">
+      <div class="row">
+        <div class="col-12 mb-5 d-flex justify-content-center">
+          <a href="users/edit">
+          <span class="h4 text-white">You are welcome, <%= current_user.username %>!</span>
+          </a>
+        </div>
+
+        <div class="col-2 d-flex justify-content-center align-items-center mt-3 mb-3">
+          <span class="border border-white rounded-circle py-1 span-pad"><i class="fas fa-exchange-alt h4 text-white mx-2 my-2"></i></span>
+        </div>
+
+        <div class="col-10 d-flex justify-content-start align-items-center border-bottom border-white">
+          <a href="/transactions" class="h5 text-white">My Transactions</a>
+        </div>
+
+        <div class="col-2 d-flex justify-content-center align-items-center mt-3 mb-3">
+          <span class="border border-white rounded-circle p-1"><i class="fas fa-expand-alt h4 text-white mx-2  my-2 "></i></span>
+        </div>
+
+        <div class="col-10 d-flex justify-content-start align-items-center border-bottom border-white">
+          <a href="/etransactions" class="h5 text-white">My External Transactions</a>
+        </div>
+
+        <div class="col-2 d-flex justify-content-center align-items-center mt-3 mb-3">
+          <span class="border border-white rounded-circle p-1"><i class="fas fa-sync-alt h4 text-white mx-2 my-2 "></i></span>
+        </div>
+
+        <div class="col-10 d-flex justify-content-start align-items-center border-bottom border-white">
+          <a href="/groups" class="h5 text-white">Transaction Groups</a>
+        </div>
+
+        <div class="col-2 d-flex justify-content-center align-items-center mt-3 mb-3">
+          <span class="border border-white rounded-circle p-1"><i class="fas fa-user-circle h4 text-white mx-2 my-2 "></i></span>
+        </div>
+
+        <div class="col-10 d-flex justify-content-start align-items-center">
+          <a href="/memberstransactions" class="h5 text-white">All member Transactions</a>
+        </div>
+
+        <div class="col-2">
+        </div>
+
+        <div class="col-10 text-right">
+          <%= link_to "Log Out", destroy_user_session_path, method: :delete, class:"btn btn-lg logout-btn " %>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

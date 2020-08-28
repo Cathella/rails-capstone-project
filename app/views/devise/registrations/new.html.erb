@@ -1,0 +1,47 @@
+<div class="container-fluid">
+  <div class="inside-width">
+    <h4 class="text-center nav-head">Register</h4>
+
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= f.error_notification %>
+
+      <div class="form-inputs">
+        <div class="row mt-3">
+          <div class="col-12">
+            <%= f.input :username,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "username" }%>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12">
+            <%= f.input :email,
+                        required: true,
+                        input_html: { autocomplete: "email" }%>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12">
+            <%= f.input :password,
+                        required: true,
+                        input_html: { autocomplete: "new-password" } %>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12">
+            <%= f.input :password_confirmation,
+                        required: true,
+                        input_html: { autocomplete: "new-password" } %>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-actions mt-3">
+        <%= f.button :submit, "Sign up", class: "logout-btn" %>
+      </div>
+    <% end %>
+
+    <%= render "devise/shared/links", class: "text-center" %>
+  </div>
+</div>
