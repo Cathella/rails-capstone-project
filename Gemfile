@@ -46,6 +46,10 @@ group :development, :test do
   gem 'sqlite3', '~> 1.3.6'
 end
 
+group :production do
+  gem 'pg'
+end
+
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'listen', '>= 3.0.5', '< 3.2'
@@ -54,10 +58,6 @@ group :development do
   gem 'rspec-rails', '~> 4.0', '>= 4.0.1'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-end
-
-group :production do
-  gem "postgres-pr"
 end
 
 group :test do
