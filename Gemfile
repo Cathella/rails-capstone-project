@@ -23,6 +23,8 @@ gem 'rubocop', '~>0.81.0'
 # gem 'ovirt-engine-sdk', '~> 4.3'
 gem 'simple_form', '~> 5.0', '>= 5.0.2'
 
+gem 'pg'
+
 gem 'active_storage_validations', '0.8.2'
 # gem 'font-awesome-rails'
 gem 'font_awesome5_rails'
@@ -43,12 +45,6 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'sqlite3'
-end
-
-group :production do
-  # installed pg via terminal
-  gem 'pg'
 end
 
 group :development do
