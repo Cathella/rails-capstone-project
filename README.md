@@ -1,18 +1,23 @@
 # Capstone Project Group our transactions
 
+![](app/assets/images/Project.png)
+
 This is my Ruby on Rails Capstone Microverse Project a Group Transactions mobile application.
 
-# Live Demo
+## Live Demo
 
 [Live demo](https://murmuring-brushlands-49944.herokuapp.com/)
 
-# What it does
+## About the project
 
-- The user signs up and logs in to the app.
-- The user is presented with a profile page with a menu that has links to the user's transactions, user's transaction groups, ungrouped transactions made by the user and other users or members transactions that have been added in the app.
-- On the user transactions index page, the user can create or add a new transaction made and as more transactions are added, the total amount of money spent is displayed at the top of the app.
+- The group transactions project is one I have built following the needed requirements as described [here](https://www.notion.so/Group-our-transactions-ccea2b6642664540a70de9f30bdff4ce), where a user needs to sign up to login into the app to access the profile page with a menu showing his or her transactions.
+- These transactions can have groups or not. Therefore a user can create a group and add a transaction to that group; or  a transaction can be created without selecting a group to fall under in case the user is not sure.
+- Inside the app, there are many action buttons like "New Transaction", "New Group" that all take you to a forms to create a transaction or group.
+- The app is fully functional and when a group is created, it is assigned an icon that will in turn be inherited by the transactions under that group. However, transactions without groups do not get to have an icon to them.
+- The extra future in this app is the ability of the user to sneak peak and checkout other app users' total transactions amount and how they are using the app.
+- My N+1 problem may have come form querying the database for grouped and non-grouped transactions. I however, managed to overcome this by creating scope methods in the Transaction model.
 
-# How to run this project
+## How to run this project
 
 - Install Ruby.
 - Install Ruby on Rails.
