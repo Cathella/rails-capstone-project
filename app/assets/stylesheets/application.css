@@ -179,7 +179,7 @@ form {
 
 .jumbotron > h2:nth-child(1),
 .jumbotron > p:nth-child(2) {
-  color: #ccc;
+  color: #fff;
 }
 
 .new-trans-btn {
