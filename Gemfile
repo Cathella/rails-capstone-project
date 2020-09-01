@@ -47,6 +47,7 @@ group :development, :test do
 end
 
 group :production do
+  # installed pg via terminal
   gem 'pg'
 end
 
