@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <div class="inside-width greyed-bg pb-5">
+    <p id="notice"><%= notice %></p>
+    <h4 class="text-center nav-head">
+      <span>
+        <a href="/profile">
+          <i class="fas fa-arrow-left h3 text-white"></i>
+        </a>
+      </span>
+      Members Expenditures
+    </h4>
+
+    <div class="card mb-3">
+      <div class="card-body d-flex justify-content-between rounded-0">
+        <span class="h5 text-muted m-0">Total Spent</span>
+        <span class="h5 text-dark font-weight-bolder m-0"> $<%= @members_sum %></span>
+      </div>
+    </div>
+
+    <% @members.each do |member| %>
+      <div class="card mb-2 mr-5 ml-5">
+        <div class="card-body d-flex justify-content-between">
+          <span class="h6 text-dark m-0"><%= member.uname %></span> <span class="h5 text-dark font-weight-bolder m-0"> $<%= member.tot_amount %></span>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

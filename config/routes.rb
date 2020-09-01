@@ -1,3 +1,25 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :groups
+  resources :transactions
+  get 'users/index'
+  get 'users/profile'
+  get '/profile', to: 'users#profile'
+  get '/etransactions', to: 'transactions#etransaction'
+  get '/memberstransactions', to: 'transactions#members_transactions'
+
+  devise_for :users, :controllers => { registrations: 'registrations' }
+
+  devise_scope :user do
+    get 'signin', to: 'devise/sessions#new'
+    get 'edit_profile', to: 'devise/registrations#edit'
+    get 'signup', to: 'devise/registrations#new'
+
+    authenticated :user do
+      root 'users#profile'
+    end
+
+    unauthenticated do
+      root 'users#index'
+    end
+  end
 end
