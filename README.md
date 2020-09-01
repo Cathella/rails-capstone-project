@@ -7,6 +7,7 @@ This is my Ruby on Rails Capstone Microverse Project a Group Transactions mobile
 ## Live Demo
 
 [Live demo](https://murmuring-brushlands-49944.herokuapp.com/)
+[Live video explaining the project](https://www.loom.com/share/e4028eef670348a78da9cb0b9cc76aa8)
 
 ## About the project
 
