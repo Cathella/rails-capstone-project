@@ -1,6 +1,6 @@
 # Capstone Project Group our transactions
 
-![](app/assets/images/Project.png)
+![](app/assets/images/CapstoneProject.png)
 
 This is my Ruby on Rails Capstone Microverse Project a Group Transactions mobile application.
 
